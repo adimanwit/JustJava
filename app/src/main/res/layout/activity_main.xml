@@ -3,80 +3,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:layout_margin="32dp"
     android:orientation="vertical"
+    android:animateLayoutChanges="true"
     tools:context=".MainActivity">
 
+
+    <EditText
+        style="@style/editText"
+        android:id="@+id/your_name_edittext"
+        android:autofillHints="@string/your_name"
+        android:hint="@string/your_name"
+        android:inputType="textPersonName" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Quantity"
-        android:textAllCaps="true"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="62dp" />
+        style="@style/title"
+        android:text="@string/toppings"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/add_button"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:onClick="increment"
-            android:text="+"
-            tools:layout_editor_absoluteX="84dp"
-            tools:layout_editor_absoluteY="114dp" />
+        <CheckBox
+            style="@style/checkbox"
+            android:id="@+id/whipped_cream_checkbox"
+            android:text="@string/whopping_cream" />
+        <CheckBox
+            style="@style/checkbox"
+            android:id="@+id/chocolate_checkbox"
+            android:text="@string/chocolate" />
 
         <TextView
-            android:id="@+id/quantity_text_view"
-            android:layout_width="wrap_content"
+            style="@style/title"
+            android:text="@string/quantity"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1"
-            android:layout_marginLeft="8dp"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            tools:layout_editor_absoluteX="68dp"
-            tools:layout_editor_absoluteY="215dp" />
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:onClick="decrement"
+                android:text="-"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:text="1"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:onClick="increment"
+                android:text="+"
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+
 
         <Button
-            android:id="@+id/subtract"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:onClick="decrement"
-            android:layout_marginLeft="8dp"
-            android:text="-"
-            tools:layout_editor_absoluteX="76dp"
-            tools:layout_editor_absoluteY="253dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submitOrder"
+            android:text="@string/order"
+            android:textAllCaps="true" />
 
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Price"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="62dp" />
-
-    <TextView
-        android:id="@+id/price_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="£5"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="62dp" />
-
-    <Button
-        android:id="@+id/order_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:onClick="submitOrder"
-        android:text="ORDER"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="341dp" />
 </LinearLayout>

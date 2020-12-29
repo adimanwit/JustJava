@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">JustJava</string>
+    <string name="toppings">Dodatki</string>
+    <string name="your_name">Twoje imie</string>
+    <string name="whopping_cream">Bita śmietana</string>
+    <string name="quantity">Ilość</string>
+    <string name="order_summary">Podsumowanie zamówienia</string>
+    <string name="order">Zamówienie</string>
+    <string name="thank_you">Dziekuje!</string>
+    <string name="add_chocolate">Dodaj czekolade</string>
+    <string name="add_whipped_cream">Dodaj bitą śmietane</string>
+    <string name="name">Nazwa</string>
+    <string name="send_email_using">Wyślij urzywając</string>
+    <string name="order_for">Zamówienie dla</string>
+    <string name="chocolate">Czekolada</string>
+    <string name="total">Łącznie</string>
+</resources>
